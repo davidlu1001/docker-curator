@@ -18,7 +18,7 @@ Image `entrypoint` is set to customized script, need to pass paremeters to `CMD`
 
 ### `[CMD]` parameters:
 
-`TYPE[snapshot|restore]  INDEX_PREFIX[...|ALL_KERERU]  REPO_NAME  DRY_RUN[True|False]`
+`TYPE[snapshot|restore]  INDEX_PREFIX[...|ALL]  REPO_NAME  DRY_RUN[True|False]`
 
 Default value is:
 ```
@@ -36,11 +36,11 @@ docker-compose run --rm es-curator snapshot .monitoring-es-7-2020.12.04 snapshot
 # Restore single index (with latest snapshot) without DRY_RUN mode
 docker-compose run --rm es-curator restore .monitoring-es-7-2020.12.04 snapshot-repo False
 
-# Snapshot ALL indexes for ES kereru without DRY_RUN mode, and delete snapshots 14 days ago
-docker-compose run --rm es-curator snapshot ALL_KERERU snapshot-repo False
+# Snapshot ALL indexes for ES without DRY_RUN mode, and delete snapshots 14 days ago
+docker-compose run --rm es-curator snapshot ALL snapshot-repo False
 
-# Restore ALL indexes for ES kereru (with latest snapshot) without DRY_RUN mode
-docker-compose run --rm es-curator restore ALL_KERERU snapshot-repo False
+# Restore ALL indexes for ES (with latest snapshot) without DRY_RUN mode
+docker-compose run --rm es-curator restore ALL snapshot-repo False
 ```
 
 ### Pass `ENV`:

@@ -17,7 +17,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-notification
+      repository: snapshot-s3-notification
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -58,7 +58,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-product-type
+      repository: snapshot-s3-product-type
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -99,7 +99,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-supplier
+      repository: snapshot-s3-supplier
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -140,7 +140,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-brand
+      repository: snapshot-s3-brand
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -181,7 +181,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-retailer
+      repository: snapshot-s3-retailer
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -222,7 +222,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-tag
+      repository: snapshot-s3-tag
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -263,7 +263,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-customer
+      repository: snapshot-s3-customer
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -304,7 +304,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-product
+      repository: snapshot-s3-product
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
@@ -345,7 +345,7 @@ actions:
       the repository filesystem access check.  Use the other options to define
       the index/shard settings for the restore.
     options:
-      repository: kereru-snapshot-s3-register_sale
+      repository: snapshot-s3-register_sale
       # Leaving name blank will result in restoring the most recent snapshot by age
       name:
       # Leaving indices blank will result in restoring all indices in the snapshot
