@@ -1,7 +1,11 @@
 # docker-curator
-Docker image for Elasticsearch Curator to manage Elasticsearch indices
+Docker image for Elasticsearch Curator to manage Elasticsearch `snapshot`
 
 Like a museum curator manages the exhibits and collections on display, Elasticsearch Curator helps you curate, or manage your indices and snapshots.
+
+Ref repo:
+- https://github.com/bobrik/docker-curator
+- https://github.com/visity/docker-elasticsearch-curator
 
 ## Why this image
 This image keeps up to date with curator releases `5.8.3`. It is also based on minimal alpine image.
@@ -11,7 +15,7 @@ This image keeps up to date with curator releases `5.8.3`. It is also based on m
 - Add support for snapshot / restore (use `curator_cli` for single index scenario)
 - Add support for snapshot / restore `ALL` indexes for ES using `curator` with actions rules (would be useful for different snapshot repo per index, and for accident recovery scenario)
 - Add `DRY_RUN` mode
-- Rewrite Dockerfile and use `alpine` to reduce image size
+- Rewrite Dockerfile and use `alpine` to reduce image size (with `python3`)
 
 ## Usage
 Image `entrypoint` is set to customized script, need to pass paremeters to `CMD`, can support override `ENV`
