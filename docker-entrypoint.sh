@@ -43,7 +43,7 @@ fi
 if [[ "$TYPE" == 'snapshot' ]]; then
 	# for all indexes for ES
 	if [[ "${INDEX_PREFIX}" == 'ALL' ]]; then
-		/usr/local/bin/curator --config /etc/curator/config.yml "${DRY_RUN}" /etc/curator/actions_snapshot.yml
+		/usr/local/bin/curator --config /etc/curator/config.yml ${DRY_RUN} /etc/curator/actions_snapshot.yml
 	else
     	# create snapshot for index(es) in the same repo
 		/usr/local/bin/curator_cli \
@@ -72,7 +72,7 @@ fi
 if [[ "$TYPE" == 'restore' ]]; then
 	# for all indexes for ES
 	if [[ "${INDEX_PREFIX}" == 'ALL' ]]; then
-		/usr/local/bin/curator --config /etc/curator/config.yml "${DRY_RUN}" /etc/curator/actions_restore.yml
+		/usr/local/bin/curator --config /etc/curator/config.yml ${DRY_RUN} /etc/curator/actions_restore.yml
 	else
 		# close first
 		/usr/local/bin/curator_cli \
