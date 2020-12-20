@@ -13,7 +13,8 @@ actions:
       ignore_unavailable: False
       include_global_state: False
       partial: False
-      wait_for_completion: True
+      wait_for_completion: ${WAIT:False}
+      continue_if_exception: True
       skip_repo_fs_check: True
       disable_action: False
     filters:
@@ -37,5 +38,5 @@ actions:
       - filtertype: age
         source: creation_date
         direction: older
-        unit: days
-        unit_count: 14
+        unit: ${UNIT:days}
+        unit_count: ${UNIT_COUNT:14}

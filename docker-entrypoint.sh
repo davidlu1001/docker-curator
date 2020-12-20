@@ -34,6 +34,19 @@ case "${DRY_RUN}" in
           ;;
 esac
 
+case "${WAIT}" in
+     True)
+          WAIT_CLI="--wait_for_completion"
+          ;;
+     False)
+          WAIT_CLI="--no-wait_for_completion"
+          ;;
+     *)
+		  echo "Invalid value for ENV variable 'WAIT' should be: [True|False]"
+		  exit 1
+          ;;
+esac
+
 # Add curator as command if needed
 if [[ "${1:0:1}" == '-' ]]; then
 	set -- curator "$@"
@@ -53,7 +66,8 @@ if [[ "$TYPE" == 'snapshot' ]]; then
 			snapshot \
 			--repository "${REPO_NAME}" \
 			--name "${INDEX_PREFIX}-${curr_date}" \
-			--wait_for_completion --skip_repo_fs_check \
+			${WAIT_CLI} \
+			--skip_repo_fs_check \
 			--filter_list "{\"filtertype\":\"pattern\",\"kind\":\"prefix\",\"value\":\"${INDEX_PREFIX}\"}"
 
     	# remove old snapshots for index(es) in the same repo
@@ -89,7 +103,9 @@ if [[ "$TYPE" == 'restore' ]]; then
 			--port 9200 \
 			restore \
 			--repository "${REPO_NAME}" \
-			--wait_for_completion --skip_repo_fs_check --ignore_empty_list \
+			${WAIT_CLI} \
+			--skip_repo_fs_check \
+			--ignore_empty_list \
 			--filter_list "[{\"filtertype\":\"state\"},{\"filtertype\":\"pattern\",\"kind\":\"prefix\",\"value\":\"${INDEX_PREFIX}\"}]"
 	fi
 fi

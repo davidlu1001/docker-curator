@@ -65,6 +65,10 @@ docker-compose run --rm es-curator restore ALL snapshot-repo False
 - UNIT: default is days, support `seconds | minutes | hours | days | weeks | months | years`
 
 - UNIT_COUNT: default is 14
+
+- LOGLEVEL: default is `INFO`
+
+- WAIT: `--wait_for_completion` for snapshot / restore operations, default is `False`
 ```
 
 e.g.

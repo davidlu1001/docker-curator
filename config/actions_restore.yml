@@ -29,7 +29,8 @@ actions:
       extra_settings:
         index_settings:
           number_of_replicas: 2
-      wait_for_completion: True
+      wait_for_completion: ${WAIT:False}
+      continue_if_exception: True
       skip_repo_fs_check: True
       disable_action: False
     filters:
