@@ -49,7 +49,7 @@ ENV INDEX_PREFIX=.kibana
 ENV REPO_NAME=snapshot-repo
 ENV DRY_RUN=True
 ENV LOGLEVEL=INFO
-ENV WAIT=False
+ENV WAIT=True
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

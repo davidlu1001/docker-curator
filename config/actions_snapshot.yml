@@ -13,8 +13,7 @@ actions:
       ignore_unavailable: False
       include_global_state: False
       partial: False
-      wait_for_completion: ${WAIT:False}
-      continue_if_exception: True
+      wait_for_completion: ${WAIT:True}
       skip_repo_fs_check: True
       disable_action: False
     filters:
