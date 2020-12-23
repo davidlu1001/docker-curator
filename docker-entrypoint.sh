@@ -47,6 +47,12 @@ case "${WAIT}" in
           ;;
 esac
 
+if [[ "${LOGLEVEL}" == "DEBUG" ]]
+then
+	# enable logging for elasticsearch and urllib3 - which hide by default as in blacklist
+	sed -i -e "/blacklist/s/[[][^]]*[]]/[]/g" /etc/curator/config.yml 
+fi
+
 # Add curator as command if needed
 if [[ "${1:0:1}" == '-' ]]; then
 	set -- curator "$@"
