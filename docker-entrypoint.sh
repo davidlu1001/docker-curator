@@ -84,6 +84,8 @@ if [[ "$TYPE" == 'snapshot' ]]; then
 			delete_snapshots \
 			--repository "${REPO_NAME}" \
 			--ignore_empty_list \
+			--retry_interval 120 \
+			--retry_count 100 \
 			--filter_list "[{\"filtertype\":\"age\",\"source\":\"creation_date\",\"direction\":\"older\",\"unit\":\"${UNIT}\",\"unit_count\":\"${UNIT_COUNT}\"},{\"filtertype\":\"pattern\",\"kind\":\"prefix\",\"value\":\"${INDEX_PREFIX}\"}]"
 	fi
 fi
