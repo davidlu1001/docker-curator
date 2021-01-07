@@ -30,6 +30,9 @@ actions:
       # Leaving name blank will result in the default 'curator-%Y%m%d%H%M'
       disable_action: False
       ignore_empty_list: True
+      timeout_override: ${TIMEOUT_OVERRIDE:21600}
+      retry_interval: 120
+      retry_count: 10
     filters:
       - filtertype: pattern
         kind: prefix
